@@ -19,9 +19,9 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
 
   constructor(
-      private fb:FormBuilder,
+      private fb: FormBuilder,
       private auth: AuthService,
-      private router:Router,
+      private router: Router,
       private store: Store<AppState> ) {
 
       this.form = fb.group({
@@ -42,8 +42,7 @@ export class LoginComponent implements OnInit {
       // allows us to add a side effect such as storing to the store
       tap(user => {
         console.log(user);
-        this.store.dispatch(
-        login({user}));
+        this.store.dispatch(login({user}));
         this.router.navigateByUrl('/courses');
       })
     )

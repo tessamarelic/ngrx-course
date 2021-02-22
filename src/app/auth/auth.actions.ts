@@ -5,5 +5,7 @@ export const login = createAction(
   '[Login Page] User Login',
   props<{user: User}>()
 );
+export const logout = createAction(
+  '[Logout] Logout',
+);
 
-// const newLoginAction = login({user: })
